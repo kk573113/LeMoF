@@ -17,10 +17,10 @@ FUSION_EPOCHS = 80
 BATCH_SIZE = 64
 N_CLASSES = 2
 
-ECG_BASE = r"/home/cbnu/Public/bio/dataset/mimic-iv-ecg-diagnostic"
-CSV_PATH = r"/home/cbnu/Public/bio/dataset/csv/integrated_dataset_with_ecg.csv"
+ECG_BASE = r"/home/c/Public/bio/dataset/mimic-iv-ecg-diagnostic"
+CSV_PATH = r"/home/c/Public/bio/dataset/csv/integrated_dataset_with_ecg.csv"
 
-OUT_DIR = r"/home/cbnu/Public/bio/KSA/result/los/[260410]integrated"
+OUT_DIR = r"/home/cbnu/Public/bio/result/los/[260410]integrated"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 CAT_COLS = ['gender', 'ventilation', 'vasopressor', 'anticoag', 'beta1']
