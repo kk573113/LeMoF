@@ -41,7 +41,6 @@ if __name__ == "__main__":
     # target_col = 'los_class'
     target_col = 'icu_los_class'
 
-    # ignore_cols = ['subject_id', 'hadm_id', 'stay_id', 'intime', 'outtime', 'ecg_path', 'mortality', 'sapsii', 'icu_los_days', 'anchor_year', 'hosp_los_days',]
     ignore_cols = ['subject_id', 'hadm_id', 'stay_id', 'intime', 'outtime', 'ecg_path', 'icu_mortality',
                    'hosp_mortality', 'readmission_30d', 'sapsii', 'icu_los_days', 'icu_los_class',
                    'anchor_year', 'hosp_los_days', 'admittime', 'dischtime']
