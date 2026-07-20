@@ -18,7 +18,6 @@ BATCH_SIZE = 64
 N_CLASSES = 2
 
 ECG_BASE = r"/home/cbnu/Public/bio/dataset/mimic-iv-ecg-diagnostic"
-# CSV_PATH = r"/home/cbnu/Public/bio/dataset/csv/cohort_all2_ecg/cohort_fluid_electrolyte_with_ecg.csv"
 CSV_PATH = r"/home/cbnu/Public/bio/dataset/csv/integrated_dataset_with_ecg.csv"
 
 OUT_DIR = r"/home/cbnu/Public/bio/KSA/result/los/[260410]integrated"
