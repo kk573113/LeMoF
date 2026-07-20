@@ -81,7 +81,7 @@ class NumericalEmbedder(nn.Module):
 # Main FTTransformer Class (3-Stage Output Adapted)
 # =========================================================================
 
-class FTTransformer(BaseModel): # [수정] BaseModel 상속
+class FTTransformer(BaseModel):
     def __init__(
         self,
         *,
@@ -113,7 +113,7 @@ class FTTransformer(BaseModel): # [수정] BaseModel 상속
         if self.num_continuous > 0:
             self.numerical_embedder = NumericalEmbedder(dim, num_continuous)
 
-        # 3. Transformer Layers (List로 관리하여 Stage 제어)
+        # 3. Transformer Layers 
         self.layers = nn.ModuleList([])
         for _ in range(depth):
             self.layers.append(nn.ModuleList([
@@ -122,7 +122,6 @@ class FTTransformer(BaseModel): # [수정] BaseModel 상속
             ]))
 
         # 4. Multi-Stage Heads
-        # FT-Transformer는 [CLS] 토큰(dim 차원)을 사용하여 분류함
         self.h1 = HeadBlock(dim, 32, num_classes)
         self.h2 = HeadBlock(dim, 32, num_classes)
         self.h3 = HeadBlock(dim, 32, num_classes)
